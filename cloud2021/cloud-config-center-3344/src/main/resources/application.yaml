@@ -15,10 +15,22 @@ spring:
       ##读取分支 注意现在是main分支
       label: main
 
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+
 eureka:
   client:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
 
-
+# rabbitmq相关配置，暴露bus刷新配置的端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"
 

@@ -1,5 +1,5 @@
 server:
-  port: 3355
+  port: 3366
 
 spring:
   application:
@@ -11,13 +11,11 @@ spring:
       name: config #配置文件名称
       profile: dev #读取后缀名称 上诉3个综合就是 main分支上 config-dev.yml
       uri: http://localhost:3344
-
-#  rabbitmq:
-#    host: localhost
-#    port: 5672
-#    username: guest
-#    password: guest
-
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   client:
